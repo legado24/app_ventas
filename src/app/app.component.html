@@ -1,0 +1,106 @@
+<app-nav-header titulo='Registro de Compras Electrónico'></app-nav-header>
+<!--<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="appForm.getForm" *ngIf="opcionesVisibles">
+        <div class="form-group row mb-0 px-1">
+
+          <label class="col-sm-12 col-md-1 col-xl-1 col-form-label">Período:</label>
+          <div class="col-sm-12 col-md-4 col-xl-3">
+            <ng-select
+              [items]="anioValido"
+              [class.is-invalid]='appForm.fieldAnio?.invalid && appForm.fieldAnio?.touched'
+              bindLabel="anio"
+              bindValue="idAnio"
+              placeholder="Seleccionar"
+              appearance="outline"
+              formControlName="anio"
+              [searchable]="true"
+              (change)="changeAnio($event)"
+              (clear)="onRemove($event)">
+            </ng-select>
+            <div class='invalid-feedback' *ngIf='appForm.fieldAnio?.invalid'>
+              <div *ngIf="appForm.fieldAnio?.hasError('required')">
+                El año es un dato obligatorio
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-xl-3 mt-3 mt-md-0 mt-lg-0 mt-xl-0">
+            <ng-select
+              [items]="meses"
+              bindLabel="mes"
+              bindValue="idMes"
+              appearance="outline"
+              [class.is-invalid]='appForm.fieldMes?.invalid && appForm.fieldMes?.touched'
+              [searchable]="true"
+              placeholder="Seleccionar"
+              (change)="changeMes($event)"
+              formControlName="mes">
+            </ng-select>
+            <div class='invalid-feedback' *ngIf='appForm.fieldMes?.invalid'>
+              <div *ngIf="appForm.fieldMes?.hasError('required')">
+                El mes es un dato obligatorio
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2 col-lg-2 col-xl-2 mt-3 mt-md-0 mt-lg-0 mt-xl-0 pl-md-0 pl-lg-0 pl-xl-0">
+            <button id="btn-aceptar" type="button" [disabled]="appForm.getForm.invalid || disableButton"
+                    class="btn btn-outline-secondary" (click)="aceptar($event)">
+              Aceptar
+            </button>
+          </div>
+          <div class="col-sm-3 col-lg-3 col-xl-3 mt-3 mt-md-0 mt-lg-0 mt-xl-0 pl-md-0 pl-lg-0 pl-xl-0 pt-2">
+            <span class="navbar-brand mb-0 h1 fw-bold" *ngIf="tipoMoneda == 'PEN'">Tipo de Contabilidad: Moneda Nacional (SOL)</span>
+            <span class="navbar-brand mb-0 h1 fw-bold" *ngIf="tipoMoneda == 'USD'">Tipo de Contabilidad: Moneda Extranjera (USD)</span>
+          </div>
+          &lt;!&ndash; <ng-container>
+            <div class='row mt-3 mx-0'>
+              <div class='col px-0'>
+                <div class="alert alert-danger mb-0" role="alert">
+                  wewewe
+                </div>
+                <div class="alert alert-danger mb-0" role="alert">
+                  wewewew
+                </div>
+              </div>
+            </div>
+          </ng-container> &ndash;&gt;
+        </div>
+        &lt;!&ndash;ng-container *ngIf="appForm.getForm.errors">
+          <div class='row mt-3 mx-0'>
+            <div class='col px-0'>
+              <div *ngIf="appForm.getForm.hasError('periodcurrentdate')" class="alert alert-danger mb-0" role="alert">
+                El período no debe ser mayor al período de la fecha actual
+              </div>
+            </div>
+          </div>
+        </ng-container&ndash;&gt;
+      </form>
+
+      <ul class="nav nav-tabs d-flex flex-nowrap pt-4" *ngIf="opcionesVisibles">
+        <li class="nav-item">
+          <a
+            id='nav-generacion-registro'
+            class="nav-link text-nowrap"
+            routerLinkActive="active"
+            [routerLink]="['generacion-registro']"
+            [class.disabled]='disabledNavigation'>Generación de Registro</a>
+        </li>
+        <li class="nav-item">
+          <a
+            id='nav-informacion-gestion'
+            class="nav-link text-nowrap"
+            routerLinkActive="active"
+            [routerLink]="['informacion-gestion']"
+            [class.disabled]='disabledNavigation'>Información de Gestión
+          </a>
+        </li>
+      </ul>
+      <fieldset class="linea-caja col-12 mb-5" style="border-top: 0; " >
+        <router-outlet></router-outlet>
+      </fieldset>
+
+      <ngx-spinner bdColor="rgba(255,255,255,0.45)" color="rgba(28,27,27,0.64)" size="medium" type="ball-scale" [fullScreen]="true"></ngx-spinner>
+    </div>
+  </div>
+</div>-->
